@@ -23,7 +23,11 @@ import { useFonts } from "expo-font";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 import { NavigationContainer } from "@react-navigation/native";
+<<<<<<< HEAD
 >>>>>>> 91187be (Created nav bar)
+=======
+import Profile from "./profile";
+>>>>>>> 5921beb (Merge)
 
 export default function Home({ navigation }) {
   const renderItem = ({ item }) => <Card />;
@@ -36,6 +40,7 @@ export default function Home({ navigation }) {
         />
       </View>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     <View style={styles.container}>
    <View style={styles.topBar}>
@@ -68,15 +73,31 @@ export default function Home({ navigation }) {
   
     
 =======
+=======
+      {/*  temporary  profile btn  */}
+      <View>
+        <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+          <Text style={styles.btn_text}> Profile</Text>
+        </TouchableOpacity>
+      </View>
+
+>>>>>>> 5921beb (Merge)
       <View>
         <FlatList
           data={Card}
           renderItem={renderItem}
+<<<<<<< HEAD
           style={{ height: undefined }}
         />
       </View>
     </SafeAreaView>
 >>>>>>> 91187be (Created nav bar)
+=======
+          style={{ height: undefined, marginBottom: 90 }}
+        />
+      </View>
+    </SafeAreaView>
+>>>>>>> 5921beb (Merge)
   );
 }
 
