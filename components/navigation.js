@@ -8,7 +8,7 @@ import Post from "../screens/post";
 import Notification from "../screens/notification";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+// import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar, Platform } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -88,33 +88,29 @@ export default function Tabs({ focused }) {
                   backgroundColor: "rgba(255,255,255,0.6)",
                 }}
               >
-                <LinearGradient
+                {/* <LinearGradient
                   colors={["#f80847", "#d02dbb", "#7d6de1"]}
                   style={{
                     alignItems: "center",
                     justifyContent: "center",
                     borderRadius: 35,
                   }}
+                > */}
+                <TouchableOpacity
+                  {...props}
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: 35,
+                    width: 70,
+                    height: 70,
+                  }}
                 >
-                  <TouchableOpacity
-                    {...props}
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: 35,
-                      width: 70,
-                      height: 70,
-                    }}
-                  >
-                    <AntDesign
-                      name="plus"
-                      size={30}
-                      color={"white"}
-                    ></AntDesign>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  <AntDesign name="plus" size={30} color={"white"}></AntDesign>
+                </TouchableOpacity>
+                {/* </LinearGradient> */}
               </View>
             );
           },

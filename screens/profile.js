@@ -12,6 +12,7 @@ import { StyleSheet } from 'react-native';
 export default function Profile() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
    <View style={{justifyContent:'center', alignContent:'center',alignItems:'center', flexDirection:'column'}}>
     
     <Text style={{justifyContent:'center', textAlign:'center',}}>This is the profile</Text>
@@ -19,6 +20,10 @@ export default function Profile() {
 =======
    <SafeAreaView>
       <View style={styles.container}>
+=======
+    <SafeAreaView>
+      <View>
+>>>>>>> 841cff6 (Update)
         <Text>This is Profile screen</Text>
       </View>
    </SafeAreaView>

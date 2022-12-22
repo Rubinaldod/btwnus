@@ -19,6 +19,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useState } from "react";
 >>>>>>> 5921beb (Merge)
 
+<<<<<<< HEAD
 
 
 export default function Card({navigation}) {
@@ -40,6 +41,8 @@ import EvilIcons from "@expo/vector-icons/EvilIcons";
 =======
 >>>>>>> 5921beb (Merge)
 
+=======
+>>>>>>> 841cff6 (Update)
 export default function Card({ navigation }) {
   const [modalOpen, setModalopen] = useState(false);
 
@@ -116,6 +119,7 @@ export default function Card({ navigation }) {
               <Text>122K</Text>
             </TouchableOpacity>
           </View>
+<<<<<<< HEAD
           <View style={styles.interactionContent}>
             <FontAwesome
               name="commenting-o"
@@ -132,6 +136,27 @@ export default function Card({ navigation }) {
                 </TouchableOpacity>    
                 </View>
             </View>
+=======
+          <View
+            style={[
+              styles.interactionContent,
+              {
+                flex: 1,
+                flexDirection: "row-reverse",
+                alignContent: "flex-end",
+              },
+            ]}
+          >
+            <TouchableOpacity style={{ flexDirection: "row" }}>
+              <FontAwesome
+                name="bookmark-o"
+                size={18}
+                style={{ marginRight: 8 }}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+>>>>>>> 841cff6 (Update)
 
         <View style={styles.textContet}>
           <Text style={styles.textContetText}>

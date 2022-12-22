@@ -75,17 +75,18 @@ export default function Home({ navigation }) {
 =======
 =======
       {/*  temporary  profile btn  */}
-      <View>
+      {/* <View>
         <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
           <Text style={styles.btn_text}> Profile</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
 >>>>>>> 5921beb (Merge)
       <View>
         <FlatList
           data={Card}
           renderItem={renderItem}
+<<<<<<< HEAD
 <<<<<<< HEAD
           style={{ height: undefined }}
         />
@@ -94,6 +95,16 @@ export default function Home({ navigation }) {
 >>>>>>> 91187be (Created nav bar)
 =======
           style={{ height: undefined, marginBottom: 90 }}
+=======
+          style={{ height: undefined }}
+        />
+      </View>
+      <View>
+        <FlatList
+          data={Card}
+          renderItem={renderItem}
+          style={{ height: undefined }}
+>>>>>>> 841cff6 (Update)
         />
       </View>
     </SafeAreaView>
