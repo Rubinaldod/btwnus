@@ -1,33 +1,16 @@
 
-<<<<<<< HEAD
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View ,Text} from 'react-native';
-=======
 import { View , Text} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StyleSheet } from 'react-native';
->>>>>>> 91187be (Created nav bar)
 
 
 export default function Profile() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-   <View style={{justifyContent:'center', alignContent:'center',alignItems:'center', flexDirection:'column'}}>
-    
-    <Text style={{justifyContent:'center', textAlign:'center',}}>This is the profile</Text>
-     </View>
-=======
    <SafeAreaView>
       <View style={styles.container}>
-=======
-    <SafeAreaView>
-      <View>
->>>>>>> 841cff6 (Update)
-        <Text>This is Profile screen</Text>
+        <Text>This is Notifications screen</Text>
       </View>
    </SafeAreaView>
->>>>>>> 91187be (Created nav bar)
   );
 }
 

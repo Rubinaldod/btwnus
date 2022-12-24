@@ -1,7 +1,6 @@
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import { useFonts } from 'expo-font';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import EvilIcons from "@expo/vector-icons/EvilIcons";
 
 export default function Login({ navigation }) {

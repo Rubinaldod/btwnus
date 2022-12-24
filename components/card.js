@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Image, Modal, TextInput, Button} from 'react-native';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { useState } from 'react';
-=======
 import {
   ImageBackground,
   StyleSheet,
@@ -17,386 +11,164 @@ import {
 } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useState } from "react";
->>>>>>> 5921beb (Merge)
-
-<<<<<<< HEAD
 
 
-export default function Card({navigation}) {
-const [modalOpen, setModalopen] = useState(false);
-=======
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-} from "react-native";
-import { useFonts } from "expo-font";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import EvilIcons from "@expo/vector-icons/EvilIcons";
-<<<<<<< HEAD
->>>>>>> 91187be (Created nav bar)
-=======
->>>>>>> 5921beb (Merge)
-
-=======
->>>>>>> 841cff6 (Update)
-export default function Card({ navigation }) {
-  const [modalOpen, setModalopen] = useState(false);
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.card}>
-        {/*===========
-                Card Head
-            =============*/}
-        <View style={styles.cardHead}>
-          <Image
-            source={require("../assets/image/profile.jpg")}
-            style={styles.crd_user_image}
-          />
-          <View style={styles.crd_top_info}>
-            <Text style={styles.crd_user_name}>Rubinaldo Domingos</Text>
-            <Text style={styles.crd_time}>12hrs ago</Text>
-          </View>
-        </View>
-        {/*===========
-                Card Image
-            =============*/}
-        <View style={styles.pst_img}>
-          <Image
-            style={styles.image}
-            source={require("../assets/image/profile.jpg")}
-          />
-        </View>
-
-<<<<<<< HEAD
-   
-   <View style={styles.container}>
+export default function Cards({navigation}){
+ const  [modalOpen, setModalopen] = useState(true);
+    return(
+      <View style={styles.container}>
 
 
-    <View style={styles.card}>
+          <View style={styles.card}>
             <View style={styles.cardHead}>
-                <Image source={require('../assets/image/profile.jpg')} style={styles.crd_user_image} />
-                <View style={styles.crd_top_info}>
-                    <Text style={styles.crd_user_name}>Rubinaldo Domingos</Text>
-                    <Text style={styles.crd_time}>12hrs ago</Text>
-                </View>
+              <Image source={require('../assets/image/profile.jpg')} style={styles.crd_user_image} />
+              <View style={styles.crd_top_info}>
+                <Text style={styles.crd_user_name}>Rubinaldo Domingos</Text>
+                <Text style={styles.crd_time}>12hrs ago</Text>
+              </View>
             </View>
 
             <View style={styles.pst_img}>
-                <Image style={styles.image} source={require('../assets/image/profile.jpg')}  />
+              <Image style={styles.image} source={require('../assets/image/profile.jpg')} />
             </View>
 
             <View style={styles.interactionbar}>
-                <View style={styles.interactionContent}>
+              <View style={styles.interactionContent}>
                 <TouchableOpacity>
-                <FontAwesome name='thumbs-o-up' size={18} style={{marginRight:8}}/>
+                  <FontAwesome name='thumbs-o-up' size={18} style={{ marginRight: 8 }} />
                 </TouchableOpacity>
                 <Text>122K</Text>
-                </View>
+              </View>
 
-<<<<<<< HEAD
-                <View style={styles.interactionContent} >
-                    <TouchableOpacity onPress={()=>setModalopen(true)} style={{flexDirection:'row'}}>
-                <FontAwesome name='commenting-o' size={18} style={{marginRight:8}}/>
-                <Text>122K</Text>
+
+
+              <View style={styles.interactionContent}>
+                <TouchableOpacity
+                  onPress={() => setModalopen(true)}
+                  style={{ flexDirection: "row" }}
+                >
+                  <FontAwesome
+                    name="commenting-o"
+                    size={18}
+                    style={{ marginRight: 8 }} />
+                  <Text>122K</Text>
                 </TouchableOpacity>
-                </View>
-=======
-          <View style={styles.interactionContent}>
-            <TouchableOpacity
-              onPress={() => setModalopen(true)}
-              style={{ flexDirection: "row" }}
-            >
+              </View>
+
+            
+
+              <View style={[styles.interactionContent, { flex: 1, flexDirection: 'row-reverse', alignContent: 'flex-end', }]}>
+                <TouchableOpacity style={{ flexDirection: 'row', }}>
+                  <FontAwesome name='bookmark-o' size={18} style={{ marginRight: 8, }} />
+                </TouchableOpacity>
+              </View>
+              </View>
+
+             
+          </View>
+
+
+          <View style={styles.textContet}>
+            <Text style={styles.textContetText}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley.
+            </Text>
+          </View>
+
+{/* MOdal */}
+           <Modal visible={modalOpen} animationType={"slide"} style={styles.modal}>
+          <View style={styles.modalHead}>
+            <Text style={styles.modalTitle}>233 comments </Text>
+
+            <View style={styles.modalCloseButton}>
               <FontAwesome
-                name="commenting-o"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-              <Text>122K</Text>
-            </TouchableOpacity>
-          </View>
-<<<<<<< HEAD
-          <View style={styles.interactionContent}>
-            <FontAwesome
-              name="commenting-o"
-              size={18}
-              style={{ marginRight: 8 }}
-            />
-            <Text>122K</Text>
-          </View>
->>>>>>> 5921beb (Merge)
-
-                <View style={[styles.interactionContent, {flex:1,flexDirection:'row-reverse', alignContent:'flex-end',  }]}>
-                <TouchableOpacity style={{flexDirection:'row',}}>
-                <FontAwesome name='bookmark-o' size={18} style={{marginRight:8,}}/>
-                </TouchableOpacity>    
-                </View>
-            </View>
-=======
-          <View
-            style={[
-              styles.interactionContent,
-              {
-                flex: 1,
-                flexDirection: "row-reverse",
-                alignContent: "flex-end",
-              },
-            ]}
-          >
-            <TouchableOpacity style={{ flexDirection: "row" }}>
-              <FontAwesome
-                name="bookmark-o"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
->>>>>>> 841cff6 (Update)
-
-        <View style={styles.textContet}>
-          <Text style={styles.textContetText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley.
-          </Text>
-        </View>
-      </View>
-
-      {/* Modal for comments */}
-
-      <Modal visible={modalOpen} animationType={"slide"} style={styles.modal}>
-        <View style={styles.modalHead}>
-          <Text style={styles.modalTitle}>233 comments </Text>
-
-          <View style={styles.modalCloseButton}>
-            <FontAwesome
-              name="close"
-              style={styles.closeButton}
-              onPress={() => setModalopen(false)}
-            />
-          </View>
-        </View>
-
-        <View style={styles.comments}>
-          <View style={styles.commentsCard}>
-            <Image
-              style={styles.commentsImg}
-              source={require("../assets/image/profile.jpg")}
-            />
-
-            <View style={styles.commentsDetails}>
-              <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
-              <Text style={styles.modalCommentText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </Text>
+                name="close"
+                style={styles.closeButton}
+                onPress={() => setModalopen(false)} />
             </View>
           </View>
 
-          <View style={styles.commentsCard}>
-            <Image
-              style={styles.commentsImg}
-              source={require("../assets/image/profile.jpg")}
-            />
+          <View style={styles.comments}>
+            <View style={styles.commentsCard}>
+              <Image
+                style={styles.commentsImg}
+                source={require("../assets/image/profile.jpg")} />
 
-            <View style={styles.commentsDetails}>
-              <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
-              <Text style={styles.modalCommentText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </Text>
+              <View style={styles.commentsDetails}>
+                <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
+                <Text style={styles.modalCommentText}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.commentsCard}>
+              <Image
+                style={styles.commentsImg}
+                source={require("../assets/image/profile.jpg")} />
+
+              <View style={styles.commentsDetails}>
+                <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
+                <Text style={styles.modalCommentText}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.
+                </Text>
+              </View>
+            </View>
+
+            <View style={styles.commentsCard}>
+              <Image
+                style={styles.commentsImg}
+                source={require("../assets/image/profile.jpg")} />
+
+              <View style={styles.commentsDetails}>
+                <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
+                <Text style={styles.modalCommentText}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry.
+                </Text>
+              </View>
             </View>
           </View>
 
-          <View style={styles.commentsCard}>
-            <Image
-              style={styles.commentsImg}
-              source={require("../assets/image/profile.jpg")}
-            />
+{/* modal */}
+          <View style={styles.modalFooter}>
+            <View style={styles.footer}>
+              <Image
+                style={styles.commentsImg}
+                source={require("../assets/image/profile.jpg")} />
 
-            <View style={styles.commentsDetails}>
-              <Text style={styles.modalUserName}>Rubinaldo Domingos</Text>
-              <Text style={styles.modalCommentText}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </Text>
+              <TextInput
+                placeholder="Comment"
+                style={styles.textInput}
+              ></TextInput>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: "black",
+                  flex: 0.3,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginLeft: 4,
+                  borderRadius: 2,
+                }}
+              >
+                <Text style={{ color: "white" }}>Post</Text>
+              </TouchableOpacity>
             </View>
           </View>
+        </Modal>
         </View>
 
-        <View style={styles.modalFooter}>
-          <View style={styles.footer}>
-            <Image
-              style={styles.commentsImg}
-              source={require("../assets/image/profile.jpg")}
-            />
-
-            <TextInput
-              placeholder="Comment"
-              style={styles.textInput}
-            ></TextInput>
-            <TouchableOpacity
-              style={{
-                backgroundColor: "black",
-                flex: 0.3,
-                justifyContent: "center",
-                alignItems: "center",
-                marginLeft: 4,
-                borderRadius: 2,
-              }}
-            >
-              <Text style={{ color: "white" }}>Post</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
-    </View>
-<<<<<<< HEAD
-</Modal>
-
-   </View>
- 
-
-    
-   
-  
-    
-=======
-        {/*===========
-                Card Interactions 
-            =============*/}
-        <View style={styles.interactionbar}>
-          <View style={styles.interactionContent}>
-            <TouchableOpacity>
-              <FontAwesome
-                name="thumbs-o-up"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-            </TouchableOpacity>
-            <Text>122K</Text>
-          </View>
-
-          <View style={styles.interactionContent}>
-            <FontAwesome
-              name="commenting-o"
-              size={18}
-              style={{ marginRight: 8 }}
-            />
-            <Text>122K</Text>
-          </View>
-
-          <View
-            style={[
-              styles.interactionContent,
-              {
-                flex: 1,
-                flexDirection: "row-reverse",
-                alignContent: "flex-end",
-              },
-            ]}
-          >
-            <TouchableOpacity style={{ flexDirection: "row" }}>
-              <FontAwesome
-                name="bookmark-o"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.textContet}>
-          <Text style={styles.textContetText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley.
-          </Text>
-        </View>
-      </View>
-
-      <View style={styles.card}>
-        <View style={styles.cardHead}>
-          <Image
-            source={require("../assets/image/profile.jpg")}
-            style={styles.crd_user_image}
-          />
-          <View style={styles.crd_top_info}>
-            <Text style={styles.crd_user_name}>Rubinaldo Domingos</Text>
-            <Text style={styles.crd_time}>12hrs ago</Text>
-          </View>
-        </View>
-
-        <View style={styles.pst_img}>
-          <Image
-            style={styles.image}
-            source={require("../assets/image/profile.jpg")}
-          />
-        </View>
-
-        <View style={styles.interactionbar}>
-          <View style={styles.interactionContent}>
-            <TouchableOpacity>
-              <FontAwesome
-                name="thumbs-o-up"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-            </TouchableOpacity>
-            <Text>122K</Text>
-          </View>
-
-          <View style={styles.interactionContent}>
-            <FontAwesome
-              name="commenting-o"
-              size={18}
-              style={{ marginRight: 8 }}
-            />
-            <Text>122K</Text>
-          </View>
-
-          <View
-            style={[
-              styles.interactionContent,
-              {
-                flex: 1,
-                flexDirection: "row-reverse",
-                alignContent: "flex-end",
-              },
-            ]}
-          >
-            <TouchableOpacity style={{ flexDirection: "row" }}>
-              <FontAwesome
-                name="bookmark-o"
-                size={18}
-                style={{ marginRight: 8 }}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        <View style={styles.textContet}>
-          <Text style={styles.textContetText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley.
-          </Text>
-        </View>
-      </View>
-    </View>
->>>>>>> 91187be (Created nav bar)
-=======
->>>>>>> 5921beb (Merge)
-  );
+    );
 }
 
-const styles = StyleSheet.create({
-  card: {
+ 
+
+
+const styles  = StyleSheet.create({
+    card: {
     height: undefined,
   },
   cardHead: {
@@ -423,8 +195,7 @@ const styles = StyleSheet.create({
     height: undefined,
     alignContent: "center",
     aspectRatio: 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 },
 interactionbar:{
     padding:20,
@@ -479,7 +250,7 @@ commentsImg:{
     marginRight:10,
     width:35,
     height:35,
-=======
+
   },
   image: {
     width: "100%",
@@ -532,7 +303,7 @@ commentsImg:{
     marginRight: 10,
     width: 35,
     height: 35,
->>>>>>> 5921beb (Merge)
+
     borderRadius: 1000,
   },
   commentsCard: {
@@ -562,9 +333,6 @@ commentsImg:{
     borderRadius: 1,
     padding: 4,
   },
-});
-=======
-  },
   image: {
     width: "100%",
     height: "100%",
@@ -587,5 +355,4 @@ commentsImg:{
   textContetText: {
     textAlign: "left",
   },
-});
->>>>>>> 91187be (Created nav bar)
+})
