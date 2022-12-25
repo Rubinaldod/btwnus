@@ -11,7 +11,6 @@ import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
 // import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar, Platform } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-// import LinearGradient from 'react-native-linear-gradient';
 
 const Tab = createBottomTabNavigator();
 

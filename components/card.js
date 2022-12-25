@@ -14,7 +14,7 @@ import { useState } from "react";
 
 
 export default function Cards({navigation}){
- const  [modalOpen, setModalopen] = useState(true);
+ const  [modalOpen, setModalopen] = useState(false);
     return(
       <View style={styles.container}>
 
