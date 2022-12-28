@@ -1,21 +1,21 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../screens/Home";
-import Login from "../screens/login";
-import Profile from "../screens/profile";
-import Search from "../screens/search";
-import Post from "../screens/post";
-import Notification from "../screens/notification";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from '../screens/Home';
+import Login from '../screens/login';
+import Profile from '../screens/profile';
+import Search from '../screens/search';
+import Post from '../screens/post';
+import Notification from '../screens/notification';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { StyleSheet, View, Image, TouchableOpacity, Text } from 'react-native';
 // import { LinearGradient } from "expo-linear-gradient";
-import { StatusBar, Platform } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import { StatusBar, Platform } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 export default function Tabs({ focused }) {
-  var color = focused ? "#f113ac" : "#bbbfd0";
+  var color = focused ? '#f113ac' : '#bbbfd0';
 
   return (
     <Tab.Navigator
@@ -24,12 +24,12 @@ export default function Tabs({ focused }) {
         showIcon: true,
         tabBarShowLabel: false,
         tabBarActiveTintColor: `#f113ac`,
-        tabBarInactiveTintColor: "#bbbfd0",
+        tabBarInactiveTintColor: '#bbbfd0',
         tabBarStyle: {
           height: 85,
           backgroundColor: `#f1f6fb`,
           paddingHorizontal: 25,
-          alignItems: "center",
+          alignItems: 'center',
         },
       }}
       initialRouteName="Login"
@@ -44,7 +44,7 @@ export default function Tabs({ focused }) {
                 <FontAwesome
                   name="home"
                   size={25}
-                  color={focused ? "#f113ac" : "#bbbfd0"}
+                  color={focused ? '#f113ac' : '#bbbfd0'}
                 />
               </View>
             );
@@ -61,7 +61,7 @@ export default function Tabs({ focused }) {
                 <FontAwesome
                   name="search"
                   size={22}
-                  color={focused ? "#f113ac" : "#bbbfd0"}
+                  color={focused ? '#f113ac' : '#bbbfd0'}
                 />
               </View>
             );
@@ -83,9 +83,9 @@ export default function Tabs({ focused }) {
                   width: 80,
                   height: 80,
                   borderRadius: 40,
-                  alignItems: "center",
-                  justifyContent: "center",
-                  backgroundColor: "rgba(255,255,255,0.6)",
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgba(255,255,255,0.6)',
                 }}
               >
                 {/* <LinearGradient
@@ -99,16 +99,16 @@ export default function Tabs({ focused }) {
                 <TouchableOpacity
                   {...props}
                   style={{
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "100%",
-                    height: "100%",
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '100%',
+                    height: '100%',
                     borderRadius: 35,
                     width: 70,
                     height: 70,
                   }}
                 >
-                  <AntDesign name="plus" size={30} color={"white"}></AntDesign>
+                  <AntDesign name="plus" size={30} color={'white'}></AntDesign>
                 </TouchableOpacity>
                 {/* </LinearGradient> */}
               </View>
@@ -126,7 +126,7 @@ export default function Tabs({ focused }) {
                 <FontAwesome
                   name="bell"
                   size={22}
-                  color={focused ? "#f113ac" : "#bbbfd0"}
+                  color={focused ? '#f113ac' : '#bbbfd0'}
                 />
               </View>
             );
@@ -142,11 +142,11 @@ export default function Tabs({ focused }) {
               <View
                 style={[
                   styles.card_border,
-                  { borderColor: focused ? "#f113ac" : "#bbbfd0" },
+                  { borderColor: focused ? '#f113ac' : '#bbbfd0' },
                 ]}
               >
                 <Image
-                  source={require("../assets/image/profile.jpg")}
+                  source={require('../assets/image/profile.jpg')}
                   style={styles.crd_user_image}
                 />
               </View>
