@@ -1,18 +1,13 @@
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, Animated, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet } from 'react-native';
-import Profile_crd_info from '../components/profile_info_card';
-import MyTopTabs from '../components/profile_top_navigator';
-import TopNavigatioBar from '../components/profile_top_navigator';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import AnimatedHeader from '../components/AnimatedHeader';
+import React, { useRef } from 'react';
 
 export default function Profile() {
-  return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Profile_crd_info />
-      </View>
-    </SafeAreaView>
-  );
+  const offset = useRef(new Animated.Value(0)).current;
+
+  return <AnimatedHeader />;
 }
 
 const styles = StyleSheet.create({
